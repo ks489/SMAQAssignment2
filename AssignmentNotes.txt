@@ -1,1 +1,4 @@
-This is the assignment
+The 10 category justifications should probably be referenced from the oracle documentation from the java library
+
+Find 10 Categories:
+
