@@ -1,0 +1,23 @@
+import static org.junit.Assert.*;
+
+import java.time.format.DateTimeFormatter;
+import java.time.temporal.TemporalAccessor;
+
+import org.junit.Test;
+
+public class TestTestCase {
+
+	@Test
+	public void test() {
+		CharSequence c = "";
+		TemporalAccessor ta = DateTimeFormatter.RFC_1123_DATE_TIME.parse("sdfsd");
+		fail("Not yet implemented");
+		//Throws DateTimeParseExeption
+	}
+	
+	@Test
+	public void test1() {
+		fail("Not yet implemented");
+	}
+
+}
