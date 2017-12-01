@@ -2,3 +2,11 @@ The 10 category justifications should probably be referenced from the oracle doc
 
 Find 10 Categories:
 
+Day of week included 
+   ===day of week===
+   day of week length = 3
+
+
+Day of week not included
+
+
