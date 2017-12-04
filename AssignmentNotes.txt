@@ -2,11 +2,70 @@ The 10 category justifications should probably be referenced from the oracle doc
 
 Find 10 Categories:
 
+Pattern size:
+-empty
+-many characters
+-(maybe show if it contains the individual elements)
+
+Day of week
+-length = 3
+-length < 3
+-length > 3
+-length = 0
+-english alphabetical character
+-improper character
+-contains and space
+
+Day of month
+-empty
+-character length = 1
+- character length = 2
+- character length > 2
+-character value is numeric
+-character value < 32
+-character value < 1
+
+
 Day of week included 
    ===day of week===
    day of week length = 3
 
 
 Day of week not included
+
+
+
+OR I CAN DO THIS
+Pattern size
+-empty				empty
+-many characters		non-empty
+
+Pattern Contents
+
++Day of week			
+-empty				empty
+—length = 3      		non-empty
+-length != 3			non-empty
+
++Day of week spacing
+-empty				day of week empty
+-has comma and space,		day of week not empty
+
++Day of month
+-empty				empty	
+—length > 0 and length < 3	non-empty
+-length > 2			non-empty
+
++Day of month spacing
+-empty				day of month empty
+-has space			day of month not empty
+
+
++Month of year
+-empty				empty
+-length = 4			non-empty
+-length != 4			non-empty
+value > 0			non-empty
+value < 10000			non-empty
 
 
