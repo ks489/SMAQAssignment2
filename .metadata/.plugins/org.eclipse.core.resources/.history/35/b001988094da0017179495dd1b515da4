@@ -45,10 +45,10 @@ public class TestTestCase {
 	//3 - Tue, 3 Jun 2008 11:05:30 GMT
 	//4 - Tue, 3 Jun 11000 11:05:30 GMT
 	//5 - Tue, 3 Jun 11:05:30 GMT
-	//6 - Tue, 3Jun 2008 11:05:30 GMT
-	//7 - Tuesday, 3 Jun 2008 11:05:30 GMT
+	//6 - Tue, 3 2008 11:05:30 GMT
+	//7 - Tue, 3 June 2008 11:05:30 GMT
 	//8 - , 3 Jun 2008 11:05:30 GMT
 	//9 - Tue 3 Jun 2008 11:05:30 GMT
-	//10 - Tue, Jun 2008 11:05:30 GMT
+	//10 - Tue, 3 Jun 2008 11:05:30 GMT
 	
 }

@@ -1,0 +1,101 @@
+import static org.junit.Assert.*;
+
+import java.util.Random;
+
+import org.junit.Test;
+import java.time.format.DateTimeFormatter;
+import java.time.temporal.TemporalAccessor;
+
+public class RandomGenerator {
+
+	@Test
+	public void test() {
+		
+		for(int i =0; i< 100; i++){
+			String dayOfWeek = randomDayOfWeek();
+			String dayOfMonth = randomDayOfMonth();
+			String monthOfYear = randomMonthOfYear();
+			String year = randomYear();
+			CharSequence cs = "Tue, 3 Jun 2008 11:05:30 GMT";
+			CharSequence datecs = String.format("{0}, {1} {2} {3} 11:05:30 GMT", dayOfWeek, dayOfMonth, monthOfYear, year);
+			TemporalAccessor parsedDate = DateTimeFormatter.RFC_1123_DATE_TIME.parse(cs);
+			
+		}
+	}
+	
+	public String randomDayOfWeek(){
+		Random random = new Random();
+		int number = random.nextInt(7); 
+		//This has eight numbers and one to return an empty string				
+		if(number == 0){
+			return "MON";
+		}else if(number == 1){
+			return "TUE";
+		}else if(number == 2){
+			return "WED";
+		}else if (number == 3){
+			return "THU";
+		}else if (number == 4){
+			return "FRI";
+		}else if (number == 5){
+			return "SAT";
+		}else if (number == 6){
+			return "SUN";
+		}
+		return "";
+	}
+	
+	public String randomDayOfMonth(){
+		Random random = new Random();
+		int number = random.nextInt(33); 
+		//Increased this number to allow for numbers greater than 31 and less than 1 for 
+		//some errors
+		return String.valueOf(number);
+		
+	}
+	
+	public String randomMonthOfYear(){
+		Random random = new Random();
+		int number = random.nextInt(12);
+		//Made random up to 12 to return some empty strings as a month
+		if(number == 0){
+			return "JAN";
+		}else if(number == 1){
+			return "FEB";
+		}else if(number == 2){
+			return "MAR";
+		}else if (number == 3){
+			return "APR";
+		}else if (number == 4){
+			return "MAY";
+		}else if (number == 5){
+			return "JUN";
+		}else if (number == 6){
+			return "JUL";
+		}else if (number == 7){
+			return "AUG";
+		}else if (number == 8){
+			return "SEP";
+		}else if (number == 9){
+			return "OCT";
+		}else if (number == 10){
+			return "NOV";
+		}else if (number == 11){
+			return "DEC";
+		}
+		return "";
+
+	}
+	
+	//need to get negative values and positive values between the range of -1000-13000
+	//That will get us some incorrect data to test our method even though the method
+	//expects 0000-9999
+	public String randomYear(){
+		int max = 13000;
+		int min = -1000;
+		Random random = new Random();
+		int number = random.nextInt((max - min) + 1) + min;
+		return String.valueOf(number);
+	}
+
+}
