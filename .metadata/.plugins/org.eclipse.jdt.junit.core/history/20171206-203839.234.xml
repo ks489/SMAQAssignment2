@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="Rerun TestTestCase" project="BlackboxTesting" tests="10" started="10" failures="0" errors="0" ignored="0">
+  <testsuite name="TestTestCase" time="0.069">
+    <testcase name="FullDateParseMissingDayOfWeekException" classname="TestTestCase" time="0.063"/>
+    <testcase name="FullDateParseMissingDayOfMonthSpaceException" classname="TestTestCase" time="0.0"/>
+    <testcase name="FullDateParseMissingDayOfMonthException" classname="TestTestCase" time="0.001"/>
+    <testcase name="FullDateParseFullDayOfWeekException" classname="TestTestCase" time="0.0"/>
+    <testcase name="MissingDayOfWeekParseCorrectly" classname="TestTestCase" time="0.003"/>
+    <testcase name="FullDateParseWrongYearException" classname="TestTestCase" time="0.001"/>
+    <testcase name="FullDateParseCorrectly" classname="TestTestCase" time="0.0"/>
+    <testcase name="ExceptDateTimeParseExceptionEmptyDate" classname="TestTestCase" time="0.0"/>
+    <testcase name="FullDateParseMissingYearException" classname="TestTestCase" time="0.001"/>
+    <testcase name="FullDateParseMissingDayOfWeekSpaceException" classname="TestTestCase" time="0.0"/>
+  </testsuite>
+</testrun>

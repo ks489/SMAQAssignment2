@@ -7,7 +7,15 @@ import java.time.format.*;
 import org.junit.Test;
 
 public class TestTestCase {
-	
+
+	@Test
+	public void test() {
+		CharSequence cs = "Tue, 3 Jun 2008 11:05:30 GMT";
+
+		TemporalAccessor ta = DateTimeFormatter.RFC_1123_DATE_TIME.parse(cs);
+		fail("Not yet implemented");
+		//Throws DateTimeParseExeption
+	}
 	//1
 	//Category A
 	//Completely Empty CharSequence
@@ -52,6 +60,7 @@ public class TestTestCase {
 	public void FullDateParseMissingYearException() {
 		CharSequence cs = "Tue, 3 Jun 11:05:30 GMT";
 		TemporalAccessor ta = DateTimeFormatter.RFC_1123_DATE_TIME.parse(cs);
+		assertNotNull(ta);
 	}
 	
 	//6
@@ -61,6 +70,7 @@ public class TestTestCase {
 	public void FullDateParseMissingDayOfMonthSpaceException() {
 		CharSequence cs = "Tue, 3Jun 2008 11:05:30 GMT";
 		TemporalAccessor ta = DateTimeFormatter.RFC_1123_DATE_TIME.parse(cs);
+		assertNotNull(ta);
 	}
 	
 	//7
@@ -70,33 +80,15 @@ public class TestTestCase {
 	public void FullDateParseFullDayOfWeekException() {
 		CharSequence cs = "Tuesday, 3 Jun 2008 11:05:30 GMT";
 		TemporalAccessor ta = DateTimeFormatter.RFC_1123_DATE_TIME.parse(cs);
-	}
-	
-	//8
-	//Categories B, C, G, I, K, O
-	//Full date parsed, missing day of week but has comma and space
-	@Test(expected = DateTimeParseException.class)
-	public void FullDateParseMissingDayOfWeekException() {
-		CharSequence cs = ", 3 Jun 2008 11:05:30 GMT";
-		TemporalAccessor ta = DateTimeFormatter.RFC_1123_DATE_TIME.parse(cs);
 		assertNotNull(ta);
 	}
 	
-	//9
-	//Categories B, C, F, I, K, O
-	//Full date parsed, missing day of week space
-	@Test(expected = DateTimeParseException.class)
-	public void FullDateParseMissingDayOfWeekSpaceException() {
-		CharSequence cs = "Tue3 Jun 2008 11:05:30 GMT";
-		TemporalAccessor ta = DateTimeFormatter.RFC_1123_DATE_TIME.parse(cs);
-	}
+	//4 - 
+	//5 - 
+	//6 - 
+	//7 - 
+	//8 - , 3 Jun 2008 11:05:30 GMT
+	//9 - Tue 3 Jun 2008 11:05:30 GMT
+	//10 - Tue, Jun 2008 11:05:30 GMT
 	
-	//10
-	//Categories B, C, G, I, K, O
-	//Full date parsed, missing day of month
-	@Test(expected = DateTimeParseException.class)
-	public void FullDateParseMissingDayOfMonthException() {
-		CharSequence cs = "Tue, Jun 2008 11:05:30 GMT";
-		TemporalAccessor ta = DateTimeFormatter.RFC_1123_DATE_TIME.parse(cs);
-	}	
 }

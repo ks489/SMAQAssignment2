@@ -70,6 +70,7 @@ public class TestTestCase {
 	public void FullDateParseFullDayOfWeekException() {
 		CharSequence cs = "Tuesday, 3 Jun 2008 11:05:30 GMT";
 		TemporalAccessor ta = DateTimeFormatter.RFC_1123_DATE_TIME.parse(cs);
+		assertNotNull(ta);
 	}
 	
 	//8
@@ -89,6 +90,7 @@ public class TestTestCase {
 	public void FullDateParseMissingDayOfWeekSpaceException() {
 		CharSequence cs = "Tue3 Jun 2008 11:05:30 GMT";
 		TemporalAccessor ta = DateTimeFormatter.RFC_1123_DATE_TIME.parse(cs);
+		assertNotNull(ta);
 	}
 	
 	//10
@@ -98,5 +100,6 @@ public class TestTestCase {
 	public void FullDateParseMissingDayOfMonthException() {
 		CharSequence cs = "Tue, Jun 2008 11:05:30 GMT";
 		TemporalAccessor ta = DateTimeFormatter.RFC_1123_DATE_TIME.parse(cs);
+		assertNotNull(ta);
 	}	
 }
